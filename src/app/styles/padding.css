@@ -1,0 +1,148 @@
+.p-20{
+    padding: 20px;
+}
+.p-30{
+    padding: 30px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-5{
+    padding: 5px;
+}
+.p-15{
+    padding: 15px;
+}
+.p-tb-14{
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.p-tb-5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.p-bt-5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.p-28{
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.p-b-5{
+    padding-bottom: 5px;
+}
+.p-t-40{
+    padding-top: 40px;
+}
+.p-t-20{
+    padding-top: 20px;
+}
+.p-t-10{
+    padding-top: 10px;
+}
+.p-t-5{
+    padding-top: 5px;
+}
+.p-t-30{
+    padding-top: 30px;
+}
+.p-l-r-20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.p-l-r-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.p-r-l-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.p-r-l-20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.p-r-l-60{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.p-l-r-60{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.p-l-r-50{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.p-r-l-50{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.p-r-l-100{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.p-r-l-200{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.p-l-r-100{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.p-l-r-200{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.p-l-r-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.p-l-5{
+    padding-left: 5px;
+}
+.m-t-10{
+    margin-top: 10px;
+}
+.m-t-20{
+    margin-top: 20px;
+}
+.m-t-30{
+    margin-top: 30px;
+}
+.m-b-10{
+    margin-bottom: 10px;
+}
+.m-b-20{
+    margin-bottom: 20px;
+}
+.reduce-gap-10{
+    margin-top: -10;
+}
+.reduce-gap-15{
+    margin-top: -15;
+}
+.reduce-gap-20{
+    margin-top: -20;
+}
+.reduce-gap-b20{
+    margin-bottom: -20;
+}
+.reduce-gap-b15{
+    margin-bottom: -15;
+}
+.reduce-gap-b10{
+    margin-bottom: -10;
+}
+.reduce-gap-30{
+    margin-top: -30;
+}
+.m-b-30{
+    margin-bottom: 30px;
+}
+.m-r-30{
+    margin-right: 30px;
+}

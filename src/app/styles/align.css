@@ -1,0 +1,40 @@
+.justify-c{
+    justify-content: center;
+}
+.justify-self-c{
+    justify-self: center;
+}
+.justify-c-l{
+    justify-content: left;
+}
+.justify-c-r{
+    justify-content: right;
+}
+.justify-item-c{
+    justify-items: center;
+}
+.justify-c-end{
+    justify-content: flex-end;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-c{
+    align-content: center;
+    border: solid;
+}
+.align-self-c{
+    align-self: center;
+}
+.align-item-c{
+    align-items: center;
+}
+.text-r{
+    text-align: right;
+}
+.text-c{
+    text-align: center;
+}
+.text-l{
+    text-align: left;
+}

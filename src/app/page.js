@@ -1,11 +1,23 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import './styles/styles.css'
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const router =useRouter()
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
+        <div className={styles.container}>
+          <div className={styles.card}>
+            <h1>Welcome to Vaccine App</h1>
+            <button className="btn-main" onClick={()=>router.push('/login')}>Continue</button>
+          </div>
+        </div>
+
+        {/* <Image
           className={styles.logo}
           src="/next.svg"
           alt="Next.js logo"
@@ -59,7 +71,7 @@ export default function Home() {
           >
             Documentation
           </a>
-        </div>
+        </div> */}
       </main>
     </div>
   );

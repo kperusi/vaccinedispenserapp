@@ -14,20 +14,9 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  /* background-color: var(--background); */
 }
 
-.main {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
 
 .intro {
   display: flex;
@@ -44,7 +33,7 @@
   line-height: 48px;
   letter-spacing: -2.4px;
   text-wrap: balance;
-  color: var(--text-primary);
+  color: black;
 }
 
 .intro p {
@@ -108,7 +97,7 @@ a.secondary {
 
 @media (max-width: 600px) {
   .main {
-    padding: 48px 24px;
+    /* padding: 48px 24px; */
   }
 
   .intro {
@@ -128,8 +117,8 @@ a.secondary {
   }
 
   .page {
-    --background: #000;
-    --foreground: #000;
+    /* --background: #000; */
+    /* --foreground: #000; */
 
     --text-primary: #ededed;
     --text-secondary: #999;

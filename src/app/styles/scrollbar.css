@@ -1,0 +1,29 @@
+/* Container styling */
+.scroll-container {
+  max-height: 454px;
+  overflow-y: auto;
+  
+  /* Firefox support */
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+/* Chrome, Edge, and Safari support */
+.scroll-container::-webkit-scrollbar {
+  width: 8px; /* Thickness of the scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f8fafc; /* Color of the empty space */
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1; /* Color of the draggable bar */
+  border-radius: 10px;       /* Makes it look rounded/pill-shaped */
+  border: 2px solid #f8fafc; /* Creates "padding" around the thumb */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8; /* Darkens when the user interacts */
+}

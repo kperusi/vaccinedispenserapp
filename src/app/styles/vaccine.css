@@ -1,0 +1,60 @@
+.vaccine-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  
+}
+
+.vaccine-container h2 {
+  margin-bottom: 20px;
+}
+
+/* Form */
+.vaccine-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.vaccine-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+.vaccine-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+thead {
+  background: #f1f5f9;
+}
+
+.active {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.disabled {
+  color: #dc2626;
+  font-weight: 600;
+}

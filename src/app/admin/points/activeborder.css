@@ -1,0 +1,213 @@
+.activeborder {
+    /* border: 1px solid blue; */
+}
+input:focus {
+    /* border:1px solid black; */
+    outline: none;
+}
+.cursor-h {
+    cursor: pointer;
+}
+.password-cx {
+    width: 100%;
+
+    margin-bottom: 15px;
+    padding: 1px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    align-items: center;
+}
+.password-input {
+    border: none;
+    width: 90%;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.class-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    /* font-size: 0.95rem; */
+    transition: border-color 0.2s;
+    color: black;
+    border-color: #2563eb;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.btn-save {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-add {
+    width: 20%;
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover {
+    background: #1d4ed8;
+}
+
+/* Table Styles */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    width: 200px;
+}
+
+.class-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.class-table th {
+    text-align: left;
+    background: #f8fafc;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #64748b;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.class-table td {
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Arm Tags */
+.arm-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.arm-tag {
+    background: #eff6ff;
+    color: #1e40af;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #dbeafe;
+}
+
+.check-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+.input-label-cx {
+    display: flex;
+
+    flex-direction: row;
+    width: 200px;
+    gap: 10px;
+}
+.label {
+    display: flex;
+    width: 100%;
+    /* padding: 5px; */
+    height: 100%;
+    text-align: left;
+    justify-content: left;
+
+    align-content: center;
+}
+.check-group input {
+    width: 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+.edit-link {
+    color: #2563eb;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.delete-link {
+    color: #ef4444;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.modal-hidden {
+    display: none;
+}
+

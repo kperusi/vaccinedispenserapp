@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+ 
+
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #cbd5f5;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.sidebar nav a:hover {
+  background: #1e293b;
+  color: #fff;
+}
+
+.logout {
+  margin-top: auto;
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px 30px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  border-bottom-right-radius: 16px;
+  /* padding-bottom: 20px; */
+}
+
+
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.point-card {
+  /* border: solid; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: white; */
+  padding:0px 20px;
+  border-radius: 10px;
+}
+
+.point-card h3 {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.point-card span{
+  display: block;
+  border-radius: 50%;
+  padding: 5px;
+  border: solid 1px #64748b ;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  background-color: purple;
+  color: white;
+}
+
+.point-card p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.card.warning {
+  border-left: 5px solid #dc2626;
+}
+
+/* Quick Actions */
+.quick-actions h2 {
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.actions a {
+  background: #2563eb;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.actions a:hover {
+  background: #1d4ed8;
+}
