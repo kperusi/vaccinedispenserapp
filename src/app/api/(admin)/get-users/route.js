@@ -23,7 +23,7 @@ export async function GET() {
       WHERE role = 'POINT'
       ORDER BY u.created_at DESC
     `;
-    console.log('.....',users)
+    // console.log('.....',users)
 
     return NextResponse.json(users, { status: 200 });
 

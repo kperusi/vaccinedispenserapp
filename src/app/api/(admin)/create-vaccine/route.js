@@ -25,15 +25,15 @@ export async function POST(req) {
       age_max,
       age_min,
     } = form;
-    console.log(user);
-    console.log(name,
-      code,
-      manufacturer,
-      doses_required,
-      interval_days,
-      description,
-      age_max,
-      age_min,);
+    // console.log(user);
+    // console.log(name,
+    //   code,
+    //   manufacturer,
+    //   doses_required,
+    //   interval_days,
+    //   description,
+    //   age_max,
+    //   age_min,);
     // Admin-only
     if (user.role !== "CONTROL") {
       return new Response(JSON.stringify({ message: "Unauthorized" }), {

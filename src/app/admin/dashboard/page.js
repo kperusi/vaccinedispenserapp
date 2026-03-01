@@ -65,7 +65,7 @@ export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleVaccineSelection = (id) => {
-    const selectedQuantity = inventory.find((i) => i?.id == id);
+    const selectedQuantity = inventories.find((i) => i?.id == id);
 
     if (selectedQuantity) {
       setSelected(selectedQuantity?.quantity || 0);

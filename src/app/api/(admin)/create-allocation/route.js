@@ -17,15 +17,14 @@ export async function POST(req) {
     //   FOREIGN KEY (facility_id) REFERENCES facilities(id)
     // )`;
 
-       const invItem = await sql`
+    const invItem = await sql`
       SELECT * FROM inventory WHERE id = ${inventory_id} 
       AND quantity>0 ORDER BY expiry_date ASC,quantity DESC LIMIT 1
     `;
 
     const inventoryItem = invItem[0];
-    
 
-
+    console.log(inventoryItem);
 
     // const stock = sql`SELECT quantity FROM inventory WHERE id = ${inventory_id}`;
 
@@ -43,20 +42,30 @@ export async function POST(req) {
       WHERE id = ${inventory_id}
     `;
 
-    console.log(inventory_id, facility_id, quantity, notes);
     await sql`
     INSERT INTO vaccine_allocations (inventory_id,facility_id,quantity_allocated,notes)
    VALUES(${inventory_id},${facility_id},${quantity},${notes})
     `;
-
+    console.log(
+      inventory_id,
+      facility_id,
+      quantity,
+      notes,
+      inventoryItem.vaccine_type_id,
+      inventoryItem.batch_number,
+      inventoryItem.manufacturer_date,
+      inventoryItem.expiry_date,
+      inventoryItem.storage_condition,
+    );
     await sql`
       INSERT INTO facility_inventory (facility_id, vaccine_type_id,batch_number,expiry_date,manufacturer_date, quantity,storage_condition)
-      VALUES (${facility_id}, ${inventoryItem.vaccine_type_id}, ${inventoryItem.batch_number},${inventoryItem.manufaturer_date},${inventoryItem.expiry_date},${quantity},${inventoryItem.storage_condition})
+      VALUES (${facility_id}, ${inventoryItem.vaccine_type_id}, ${inventoryItem.batch_number},${inventoryItem.manufacturer_date},${inventoryItem.expiry_date},${quantity},${inventoryItem.storage_condition})
       ON CONFLICT (facility_id, vaccine_type_id,batch_number)
       DO UPDATE SET quantity = facility_inventory.quantity + EXCLUDED.quantity,
       updated_at = CURRENT_TIMESTAMP
     `;
 
+    console.log("...........");
     return new Response(
       JSON.stringify({ message: "Vaccine allocation successful" }),
       {

@@ -57,7 +57,7 @@ export async function POST(req, { params }) {
     
     await sql`
       INSERT INTO facility_inventory (facility_id, vaccine_type_id,batch_number,expiry_date,manufacturer_date, quantity,storage_condition)
-      VALUES (${r.facility_id}, ${r.vaccine_id}, ${inventoryItem.batch_number},${inventoryItem.manufaturer_date},${inventoryItem.expiry_date},${r.quantity_requested},${inventoryItem.storage_condition})
+      VALUES (${r.facility_id}, ${r.vaccine_id}, ${inventoryItem.batch_number},${inventoryItem.manufacturer_date},${inventoryItem.expiry_date},${r.quantity_requested},${inventoryItem.storage_condition})
       ON CONFLICT (facility_id, vaccine_type_id,batch_number)
       DO UPDATE SET quantity = facility_inventory.quantity + EXCLUDED.quantity,
       updated_at = CURRENT_TIMESTAMP

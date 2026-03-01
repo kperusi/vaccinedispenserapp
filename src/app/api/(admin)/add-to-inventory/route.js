@@ -12,19 +12,21 @@ export async function POST(req) {
     man_date,
   } = form;
   // Admin-only
-  if (admin.role !== "CONTROL") {
-    return new Response(JSON.stringify({ message: "Unauthorized" }), {
-      status: 403,
-    });
-  }
-  if (!quantity || !batch_number || !vaccine_type_id || !expiry_date) {
-    return new Response(
-      JSON.stringify({ message: "All fields are required" }),
-      { status: 400 },
-    );
-  }
 
-  await sql`
+  try {
+    if (admin.role !== "CONTROL") {
+      return new Response(JSON.stringify({ message: "Unauthorized" }), {
+        status: 403,
+      });
+    }
+    if (!quantity || !batch_number || !vaccine_type_id || !expiry_date) {
+      return new Response(
+        JSON.stringify({ message: "All fields are required" }),
+        { status: 400 },
+      );
+    }
+
+    await sql`
 INSERT INTO inventory (vaccine_type_id,
     batch_number,
     quantity,
@@ -34,15 +36,20 @@ INSERT INTO inventory (vaccine_type_id,
     status)
     VALUES(${vaccine_type_id},${batch_number},${quantity},${expiry_date},${man_date},${storage_condition},'available')
 `;
-   return new Response(JSON.stringify({ message: "inventory added successfully" }), {
-      status: 201,
-    });
-  try {
+    return new Response(
+      JSON.stringify({ message: "inventory added successfully" }),
+      {
+        status: 201,
+      },
+    );
   } catch (error) {
     if (error.code === "23505") {
-      return new Response(JSON.stringify({ message: "inventory already exists" }), {
-        status: 409,
-      });
+      return new Response(
+        JSON.stringify({ message: "inventory already exists" }),
+        {
+          status: 409,
+        },
+      );
     }
 
     console.error(error);

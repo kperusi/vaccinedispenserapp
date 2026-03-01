@@ -18,8 +18,7 @@ export async function POST(req) {
       await req.json();
     const { name, address, phone, contact_staff, email, capacity, type } =
       healtheCenterForm;
-    console.log('->',admin);
-    console.log(name, address, phone, contact_staff, email, capacity, type);
+    
     // Admin-only
     if (admin.role !== "CONTROL") {
       return new Response(JSON.stringify({ message: "Unauthorized" }), {

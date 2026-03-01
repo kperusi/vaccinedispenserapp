@@ -3,12 +3,14 @@ import { useContext, useEffect, useState } from "react";
 import "../../styles/styles.css";
 import { useRouter } from "next/navigation";
 import { userContext } from "../../context/userContext";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [visible,setVisible]=useState()
   const { user, setUser } = useContext(userContext);
 
   // Fake login for demo; replace with real API later
@@ -43,6 +45,10 @@ export default function Home() {
     }
   };
 
+const handlePasswordVisible=()=>{
+  setVisible(!visible)
+}
+
   return (
     <main
       style={{
@@ -73,12 +79,13 @@ export default function Home() {
           <div className="flex fxd-c w-full">
             <label>Password</label>
             <input
-              type="password"
+              type={visible?'password':'text'}
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <Image alt="password visibility" width={15} height={15}src='/images/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg'/>
           </div>
 
           <button

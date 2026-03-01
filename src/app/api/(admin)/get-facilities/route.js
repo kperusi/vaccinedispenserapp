@@ -23,7 +23,7 @@ export async function GET() {
       FROM facilities
       ORDER BY created_at DESC
     `;
-console.log('...',facilities)
+// console.log('...',facilities)
     return NextResponse.json(facilities, { status: 200 });
     
   } catch (error) {

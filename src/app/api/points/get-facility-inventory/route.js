@@ -19,7 +19,7 @@ export async function GET(req) {
     WHERE facility_id=${id}
     `;
 
-    console.log("point-inventory", inventory);
+    // console.log("point-inventory", inventory);
     return NextResponse.json(inventory, { status: 201 });
 
   } catch (error) {
