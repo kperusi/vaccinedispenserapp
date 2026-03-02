@@ -10,43 +10,7 @@ import sql from "../../lib/db";
 // });
 
 export async function POST(req) {
-  // async function checkUsers() {
-  //   try {
-  //     console.log("🔍 Checking users in database...\n");
 
-  //     const users = await sql`
-  //     SELECT id, name, email, role, created_at
-  //     FROM users
-  //   `;
-
-  //     if (users.length === 0) {
-  //       console.log("❌ No users found in database!");
-  //       console.log("\nRun the setup script to create a test user:");
-  //       // console.log("node scripts/setup-db.js");
-  //     } else {
-  //       console.log(`✅ Found ${users.length} user(s):\n`);
-  //       users.forEach((user) => {
-  //         console.log(`Username: ${user.name}`);
-  //         console.log(`Email: ${user.email}`);
-  //         console.log(`Role: ${user.role}`);
-  //         console.log(`Created: ${user.created_at}`);
-  //         console.log("---");
-  //       });
-  //     }
-  //   } catch (error) {
-  //     if (error.message.includes("does not exist")) {
-  //       console.log("❌ Users table doesn't exist!");
-  //       console.log("\nRun the setup script to create the table:");
-  //       console.log("node scripts/setup-db.js");
-  //     } else {
-  //       console.error("❌ Error:", error);
-  //     }
-  //   } finally {
-  //     await sql.end();
-  //   }
-  // }
-
-  // checkUsers();
 
   try {
     const { email, password } = await req.json();
@@ -97,7 +61,7 @@ WHERE id=${user.id}
   } catch (err) {
     console.error("LOGIN ERROR:", err);
 
-    return new Response(JSON.stringify({ message: "Server error" }), {
+    return new Response(JSON.stringify({ message:err}), {
       status: 500,
     });
   }
