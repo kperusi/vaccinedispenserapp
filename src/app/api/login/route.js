@@ -61,7 +61,7 @@ WHERE id=${user.id}
   } catch (err) {
     console.error("LOGIN ERROR:", err);
 
-    return new Response(JSON.stringify({ message:err}), {
+    return new Response(JSON.stringify({ message:"Server Error"}), {
       status: 500,
     });
   }
