@@ -54,23 +54,36 @@
 }
 
 .login-cx {
-  background: url("../../assets/images/bg-sidebar-desktop.svg");
+  display: flex;
+  /* padding-right: 30px!important; */
+  /* align-items: flex-end; */
+ justify-content: space-between;
+}
+.ds-bg {
+  height: 100vh;
+  background: url("../../../public/bg-sidebar-desktop.svg");
   background-repeat: no-repeat;
-  background-position: 0px 50%;
-  background-size: 40%;
+  background-position: 0px 70%;
+  background-size: cover;
+  width: 43%;
+  border-top-right-radius: 20px;
 }
 .login-form {
-  height: 94vh;
-  width: 41%;
-  box-shadow: 1px 5px 10px 0px rgb(38, 38, 71);
-  background-color: white;
-  background-image: url("../../assets/images/bg-pattern-circles.svg");
+  height: 100vh;
+  width: 50%;
+  padding-right: 10px;
+  /* box-shadow: 1px 5px 10px 0px rgb(38, 38, 71); */
+
+  background-image: url("../../../public/bg-pattern-circles.svg");
   background-repeat: no-repeat;
-  background-position: 150px 300px;
+  background-position: 180px 320px;
   background-size: 100%;
 }
 .login-form input {
   /* background-color: #bdcdf8 !important; */
+}
+.login-form input:focus {
+  background-color: white;
 }
 .inv-body {
   max-height: 50px;
@@ -272,6 +285,26 @@
   padding: 5px;
   font-family: "Ubuntu";
 }
+.password-input-cx {
+  border-style: solid;
+  border-width: 1.7px;
+  border-color: #d1cfcf;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  align-items: center;
+  align-content: center;
+  padding-right: 10px;
+}
+
+.password-input-cx image {
+}
+
+.password-input-cx input {
+  border: none !important;
+  height: 100%;
+}
 input {
   height: 40px;
   border-radius: 5px;
@@ -327,7 +360,6 @@ p {
   max-width: 1200px; /* Increased for dashboard feel */
   margin: 0 auto;
   padding: 0 15px;
-  
 }
 .page-header {
   display: flex;
@@ -1278,14 +1310,14 @@ select {
     width: 51%;
     box-shadow: 1px 5px 10px 0px rgb(38, 38, 71);
     background-color: white;
-    background-image: url("../../assets/images/bg-pattern-circles.svg");
+    background-image: url("../../../public/bg-pattern-circles.svg");
     background-repeat: no-repeat;
     background-position: 200px 400px !important;
     background-size: 100% !important;
   }
   .ms-bg {
     height: 300px;
-    background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+    background-image: url("../../../public/bg-sidebar-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px 0px;
@@ -1295,7 +1327,7 @@ select {
   /* small laptop */
 
   .login-cx {
-    background: url("../../assets/images/bg-sidebar-desktop.svg");
+    background: url("../../../public/bg-sidebar-desktop.svg");
     background-repeat: no-repeat;
     background-position: 0px 50%;
     background-size: 50%;
@@ -1305,7 +1337,7 @@ select {
     width: 51%;
     box-shadow: 1px 5px 10px 0px rgb(38, 38, 71);
     background-color: white;
-    background-image: url("../../assets/images/bg-pattern-circles.svg");
+    background-image: url("../../../public/bg-pattern-circles.svg");
     background-repeat: no-repeat;
     background-position: 150px 300px;
     background-size: 100%;

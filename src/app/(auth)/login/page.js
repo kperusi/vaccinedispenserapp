@@ -10,7 +10,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [visible,setVisible]=useState()
+  const [visible, setVisible] = useState(true);
   const { user, setUser } = useContext(userContext);
 
   // Fake login for demo; replace with real API later
@@ -45,23 +45,24 @@ export default function Home() {
     }
   };
 
-const handlePasswordVisible=()=>{
-  setVisible(!visible)
-}
-
+  const handlePasswordVisible = () => {
+    setVisible(!visible);
+  };
+  console.log(visible);
   return (
     <main
       style={{
         height: "100vh",
-        alignItems: "center",
-        justifyContent: "center",
+       
       }}
-      className="flex fxd-c login-cx"
+      className="flex fxd-r login-cx"
     >
-      <div className="login-form flex fxd-c bg-white border-r-8 b-1">
-       <div className="ms-bg"></div>
+      <div className="ds-bg">
+       
+      </div>
+      <div className="login-form flex fxd-c">
+        <div className="ms-bg"></div>
         <div className="flex fxd-c p-30  input-group gap-20 justify-c align-item-c">
-
           <div className="flex fxd-c w-full ">
             <h2 className="color-black">Welcome back to Vax</h2>
             <h3 className="color-grey">Login to Continue</h3>
@@ -69,6 +70,7 @@ const handlePasswordVisible=()=>{
           <div className="flex fxd-c w-full p-t-20">
             <label>Username</label>
             <input
+          
               type="email"
               placeholder="Email"
               value={email}
@@ -78,14 +80,25 @@ const handlePasswordVisible=()=>{
           </div>
           <div className="flex fxd-c w-full">
             <label>Password</label>
-            <input
-              type={visible?'password':'text'}
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <Image alt="password visibility" width={15} height={15}src='/images/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg'/>
+            {/* <div className="password-input-cx flex"> */}
+              <input
+             
+                type={visible ? "password" : "text"}
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                autoComplete="off"
+              />
+              <Image
+              style={{alignSelf:'flex-end'}}
+                onClick={handlePasswordVisible}
+                alt="password visibility"
+                width={20}
+                height={20}
+                src={`${visible ? "/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" : "/visibility_off_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"}`}
+              />
+            {/* </div> */}
           </div>
 
           <button
