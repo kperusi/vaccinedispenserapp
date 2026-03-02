@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import postgres from "postgres";
-import sql from '../../lib/db'
+import sql from "../../lib/db";
 
 // const sql = postgres(process.env.POSTGRES_URL, {
 //   ssl: process.env.NODE_ENV === "production" ? "require" : false,
