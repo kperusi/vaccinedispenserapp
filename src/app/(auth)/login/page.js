@@ -26,14 +26,14 @@ export default function Home() {
       });
 
       const data = await res.json();
-      localStorage.setItem("user", JSON.stringify(data));
-      setUser(data);
 
       if (!res.ok) {
         setError(data.message || "Login failed");
         return;
       }
 
+      localStorage.setItem("user", JSON.stringify(data));
+      setUser(data);
       // Redirect based on role
       if (data.role === "CONTROL") {
         router.push("/admin/dashboard");
@@ -57,7 +57,6 @@ export default function Home() {
       className="flex fxd-r login-cx"
     >
       <div className="ds-bg">
-       
         <h2>
           <strong>Welcome Back </strong>
           Vax Disperser Control
