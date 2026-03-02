@@ -53,12 +53,16 @@ export default function Home() {
     <main
       style={{
         height: "100vh",
-       
       }}
       className="flex fxd-r login-cx"
     >
       <div className="ds-bg">
-       
+        <p></p>
+        <h2>
+          <strong>Welcome Back </strong><br/>
+          
+          Vax Disperser Control
+        </h2>
       </div>
       <div className="login-form flex fxd-c">
         <div className="ms-bg"></div>
@@ -70,7 +74,6 @@ export default function Home() {
           <div className="flex fxd-c w-full p-t-20">
             <label>Username</label>
             <input
-          
               type="email"
               placeholder="Email"
               value={email}
@@ -81,23 +84,22 @@ export default function Home() {
           <div className="flex fxd-c w-full">
             <label>Password</label>
             {/* <div className="password-input-cx flex"> */}
-              <input
-             
-                type={visible ? "password" : "text"}
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                autoComplete="off"
-              />
-              <Image
-              style={{alignSelf:'flex-end'}}
-                onClick={handlePasswordVisible}
-                alt="password visibility"
-                width={20}
-                height={20}
-                src={`${visible ? "/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" : "/visibility_off_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"}`}
-              />
+            <input
+              type={visible ? "password" : "text"}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              autoComplete="off"
+            />
+            <Image
+              style={{ alignSelf: "flex-end" }}
+              onClick={handlePasswordVisible}
+              alt="password visibility"
+              width={20}
+              height={20}
+              src={`${visible ? "/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" : "/visibility_off_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"}`}
+            />
             {/* </div> */}
           </div>
 

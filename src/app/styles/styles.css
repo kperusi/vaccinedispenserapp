@@ -61,12 +61,35 @@
 }
 .ds-bg {
   height: 100vh;
-  background: url("../../../public/bg-sidebar-desktop.svg");
+  background: url("../../../public/automated-vaccine-system-carousel.jpg");
   background-repeat: no-repeat;
   background-position: 0px 70%;
   background-size: cover;
-  width: 43%;
-  border-top-right-radius: 20px;
+  width: 47%;
+ position: relative;
+  /* border-top-right-radius: 20px; */
+}
+.ds-bg h2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  top:30%;
+  width: 100%;
+  background-color: transparent;
+  color: rgb(203, 203, 235);
+  z-index: 1000;
+  line-height: 0.5em;
+}
+.ds-bg::after{
+  content: '';
+  position: absolute;
+  background-color: darkblue;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  top: 0;
 }
 .login-form {
   height: 100vh;
