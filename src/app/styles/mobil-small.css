@@ -1,6 +1,7 @@
 @media (max-width: 600px) {
     body {
         font-size: 16px; /* base */
+        border: solid blue;
     }
 
     p,
@@ -81,5 +82,8 @@
         background-size: 100% 200px;
         background-repeat: no-repeat;
         background-position: 0px -20px;
+    }
+    .ds-bg{
+        display: none;
     }
 }

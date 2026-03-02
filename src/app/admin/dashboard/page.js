@@ -97,7 +97,7 @@ export default function Page() {
 
           <div className="card">
             <h3>Dispensed Today</h3>
-            <p>340</p>
+            <p>00</p>
           </div>
 
           <div className="card warning">
