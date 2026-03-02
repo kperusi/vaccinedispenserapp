@@ -38,7 +38,7 @@ export default function Home() {
       if (data.role === "CONTROL") {
         router.push("/admin/dashboard");
       } else {
-        router.push(`points/dashboard/${data.id}`);
+        router.push(`/points/dashboard/${data.id}`);
       }
     } catch (err) {
       setError("Network error");
