@@ -1,12 +1,13 @@
 import bcrypt from "bcryptjs";
 import postgres from "postgres";
+import sql from '../../lib/db'
 
-const sql = postgres(process.env.POSTGRES_URL, {
-  ssl: process.env.NODE_ENV === "production" ? "require" : false,
-  idle_timeout: 20,
-  max_lifetime: 60 * 30,
-  max: 10,
-});
+// const sql = postgres(process.env.POSTGRES_URL, {
+//   ssl: process.env.NODE_ENV === "production" ? "require" : false,
+//   idle_timeout: 20,
+//   max_lifetime: 60 * 30,
+//   max: 10,
+// });
 
 export async function POST(req) {
   // async function checkUsers() {

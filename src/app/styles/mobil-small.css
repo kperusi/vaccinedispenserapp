@@ -1,7 +1,6 @@
 @media (max-width: 600px) {
     body {
         font-size: 16px; /* base */
-        border: solid blue;
     }
 
     p,
@@ -64,7 +63,8 @@
     }
     .login-cx {
         width: 100%;
-        padding: 0;
+        padding: 0!important;
+    
     }
     .login-form {
         width: 100% !important;
@@ -78,10 +78,11 @@
     }
     .ms-bg {
         height: 300px;
+        width: 100%;
         background-image: url("../../../public/bg-sidebar-mobile.svg");
-        background-size: 100% 200px;
+        background-size: 100% 20px;
         background-repeat: no-repeat;
-        background-position: 0px -20px;
+        background-position: -10px 30px;
     }
     .ds-bg{
         display: none;
