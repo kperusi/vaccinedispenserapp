@@ -57,10 +57,9 @@ export default function Home() {
       className="flex fxd-r login-cx"
     >
       <div className="ds-bg">
-        <p></p>
+       
         <h2>
-          <strong>Welcome Back </strong><br/>
-          
+          <strong>Welcome Back </strong>
           Vax Disperser Control
         </h2>
       </div>
