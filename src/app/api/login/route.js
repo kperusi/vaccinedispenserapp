@@ -1,5 +1,4 @@
 import bcrypt from "bcryptjs";
-import postgres from "postgres";
 import sql from "../../lib/db";
 
 // const sql = postgres(process.env.POSTGRES_URL, {
@@ -59,15 +58,12 @@ WHERE id=${user.id}
   } catch (err) {
     console.error("LOGIN ERROR:", err);
 
-    return new Response(
-    { message: err.stack,
-        error: err.message,
-        stack: err.stack},
-       
-      
-      {
-        status: 500,
-      },
-    );
+     return new Response(
+    JSON.stringify({
+      message: "Internal Server Error",
+      error: err.message,
+    }),
+    { status: 500 }
+  );
   }
 }
