@@ -57,13 +57,14 @@ WHERE id=${user.id}
     );
   } catch (err) {
     console.error("LOGIN ERROR:", err);
-
-     return new Response(
-    JSON.stringify({
-      message: "Internal Server Error",
-      error: err.message,
-    }),
-    { status: 500 }
-  );
+    return new Response(
+      JSON.stringify({
+        error: err?.message,
+        name: err?.name,
+        code: err?.code,
+        detail: err?.detail,
+      }),
+      { status: 500 },
+    );
   }
 }
