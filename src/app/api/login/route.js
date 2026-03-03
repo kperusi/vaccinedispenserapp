@@ -60,7 +60,7 @@ WHERE id=${user.id}
     console.error("LOGIN ERROR:", err);
 
     return new Response(
-    { message: err,
+    { message: err.stack,
         error: err.message,
         stack: err.stack},
        
