@@ -10,7 +10,8 @@ import sql from "../../lib/db";
 // });
 
 export async function POST(req) {
-
+  console.log("SUPABASE_URL:", process.env.SUPABASE_URL);
+  console.log("SUPABASE_KEY:", process.env.SUPABASE_ANON_KEY);
 
   try {
     const { email, password } = await req.json();
@@ -61,7 +62,7 @@ WHERE id=${user.id}
   } catch (err) {
     console.error("LOGIN ERROR:", err);
 
-    return new Response(JSON.stringify({ message:"Server Error"}), {
+    return new Response(JSON.stringify({ message: "Server Error" }), {
       status: 500,
     });
   }
