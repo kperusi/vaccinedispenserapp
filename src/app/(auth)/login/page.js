@@ -28,11 +28,11 @@ export default function Home() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.message || "Login failed");
+        setError(data.details + data.code || "Login failed");
         return;
       }
-      console.log('from login')
-console.log('>>>',data.error,data.code,data.details)
+      console.log("from login");
+      console.log(">>>", data.error, data.code, data.details);
       localStorage.setItem("user", JSON.stringify(data));
       setUser(data);
       // Redirect based on role
