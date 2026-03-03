@@ -3,6 +3,8 @@ import postgres from "postgres";
 
 let sql;
 
+console.log("DB URL exists:", !!process.env.POSTGRES_URL);
+
 if (!global.sql) {
   global.sql = postgres(process.env.POSTGRES_URL, {
     ssl: { rejectUnauthorized: false },
